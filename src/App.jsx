@@ -1,7 +1,8 @@
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-import LoginForm from "./components/LoginForm";
+import { BrowserRouter, Routes, Route, NavLink, } from "react-router-dom";
 import StartPage from "./components/StartPage";
+import LoginForm from "./components/LoginForm";
 import MainPage from "./components/MainPage";
+import MovieInfoCard from "./components/MovieInfoCard";
 
 export default function App() {
   return (
@@ -10,13 +11,15 @@ export default function App() {
         <nav>
           <NavLink to="loginForm">Sign In</NavLink>
           <NavLink to="mainPage">Main</NavLink>
+          
         </nav>
       </header>
       <main>
         <Routes>
           <Route path="/" element={<StartPage />} />
           <Route path="loginForm" element={<LoginForm />} />
-          <Route path="MainPage" element={<MainPage />} />
+          <Route path="mainPage" element={<MainPage />} />
+          <Route path="/movie/:id" element={<MovieInfoCard />} />
         </Routes>
       </main>
     </BrowserRouter>
