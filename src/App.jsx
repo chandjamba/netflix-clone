@@ -19,7 +19,7 @@ export default function App() {
           <Route path="/" element={<StartPage />} />
           <Route path="loginForm" element={<LoginForm />} />
           <Route path="mainPage" element={<MainPage />} />
-          <Route path="/movie/:id" element={<MovieInfoCard />} />
+          <Route path="/movie/:movieId" element={<MovieInfoCard />} />
         </Routes>
       </main>
     </BrowserRouter>
