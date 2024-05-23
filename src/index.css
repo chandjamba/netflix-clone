@@ -371,3 +371,39 @@ main {
 .movie-release-date {
   color: #fff;
 }
+
+/* Movies info card components styling */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height:750px;
+  width: 750px;
+}
+
+.heading-navbar {
+  display: flex;
+  flex-direction: row;
+  width: 450px;
+  height: 20px;
+}
+
+.thumbnail-wrapper {
+  display: flex;
+  justify-content: left;
+}
+
+.thumbnail {
+  display: flex;
+  height: 350px;
+  width: 350px;
+}
+
+.genres {
+  display: flex;
+  flex-direction: row;
+}
+
+.overview {
+  display: flex;
+  width: 300px;
+}
