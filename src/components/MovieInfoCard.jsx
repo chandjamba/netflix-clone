@@ -32,21 +32,40 @@ export default function MovieInfoCard() {
 
   return <div className="main-container">
     <div className="heading-navbar">
-      <h1>{movieInfo?.title}</h1>
+      <h1 className="title">{movieInfo?.title}</h1>
+      <div className="rating-popularity-container">
+      <p className="rating"> ⭐{movieInfo?.vote_average } /10</p>
+      <p className="popularity"> 👍{movieInfo?.popularity * 10000}</p>
       </div>
-    <div className="thumbnail-wrapper">
-      <div className="thumbnail">
+      </div>
+    <div className="thumbnail-about-wrapper">
+      <div className="img-box">
       <img
+      className="image"
           src={`${img_base_url}/${img_size}/${movieInfo?.poster_path}`}
           alt=""
         />
-      </div>
+        </div>
+        <div className="about">
+          <div className="release-date">
+            Release Date: {movieInfo?.release_date}
+          </div>
+          <div className="origin-country">
+          Origin country: {movieInfo?.production_countries.map((country)=> {
+              return <p className="country-name"> {country.name}</p>
+            })}
+          </div>
+          <div className="production-companies">
+          Production: {movieInfo?.production_companies.map((company)=> {
+              return <p className="company-names">  {company.name}</p>
+              })}
+          </div>
+        </div>
     </div>
-    <div className="genres">
-      <div>{movieInfo?.genres.map((genre) => {
-        return <p> {genre.name} </p>
+      <div className="genres">
+        {movieInfo?.genres.map((genre) => {
+        return <p className="genre-types"> {genre.name} </p>
        })}</div> 
-    </div>
     <div className="overview">
       {movieInfo?.overview}
     </div>

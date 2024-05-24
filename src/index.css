@@ -373,38 +373,151 @@ main {
 }
 
 /* Movies info card components styling */
+
+
 .main-container {
   display: flex;
   flex-direction: column;
-  height: 750px;
-  width: 750px;
+  width: 900px;
+  height: 100%;
+  padding: 75px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 50px 0 50px 0;
+  border-radius: 10px;
 }
 
 .heading-navbar {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+}
+
+.rating-popularity-container {
+  display: flex;
+  flex-direction: row;
+  align-items: right;
+  justify-content: center;
+}
+
+.rating {
+  display: flex;
+  border-bottom: solid;
+  border-width: 2px;
+  align-items: center;
+  margin-right: 8px;
+  padding: 3px;
+  cursor:pointer;
+}
+
+.popularity {
+  display: flex;
+  border-bottom: solid;
+  border-width: 2px;
+  align-items: center;
+  margin-left: 8px;
+  padding: 3px;
+}
+
+.thumbnail-about-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width:750px;
+  height: 320px;
+  margin: 10px 0 0 0;
+}
+
+.img-box {
+display: flex;
+width: 400px;
+height: 300px;
+
+}
+
+.image {
+display: flex;
+width: 400px;
+height: 300px;
+border-radius: 5px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  height: 300px;
   width: 450px;
-  height: 20px;
+  background-color: rgba(44, 43, 43, 0.8);
+  margin-left: 10px;
+  border-radius: 5px;
+  
 }
 
-.thumbnail-wrapper {
+.release-date {
   display: flex;
-  justify-content: left;
+  margin: 5px 0 0 0;
+  border-bottom: solid;
+  border-color: white;
+  border-width: 1px ;
+  padding: 10px 0 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.thumbnail {
+.production-companies {
   display: flex;
-  height: 350px;
-  width: 350px;
-  margin: 20px 0 20px 0;
+  flex-direction: row;
+  margin: 5px 0 0 0;
+  border-bottom: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 10px 0 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.company-names {
+  display: flex;
+}
+
+.origin-country {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0 0 0;
+  border-bottom: solid;
+  border-color: white;
+  border-width: 1px;
+  padding: 10px 0 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.country-name {
+  display: flex;
 }
 
 .genres {
   display: flex;
   flex-direction: row;
+  margin: 0 5px 5px 0;
+  width: 750px;
 }
-
+.genre-types {
+  display: flex;
+  justify-content: left;
+  padding: 5px;
+  margin: 3px ;
+  border: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  font-size: small;
+  font-family: Arial, Helvetica, sans-serif;
+}
 .overview {
   display: flex;
-  width: 300px;
+  width: 750px;
+  padding: 5px;
+  text-align: justify;
 }
