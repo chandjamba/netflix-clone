@@ -43,10 +43,12 @@ export default function MovieInfoCard() {
       </div>
     </div>
     <div className="genres">
-      {/* <div>{movieInfo?.}</div> */}
+      <div>{movieInfo?.genres.map((genre) => {
+        return <p> {genre.name} </p>
+       })}</div> 
     </div>
     <div className="overview">
-      <p>{movieInfo?.overview}</p>
+      {movieInfo?.overview}
     </div>
     </div>;
 }

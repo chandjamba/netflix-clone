@@ -376,7 +376,7 @@ main {
 .main-container {
   display: flex;
   flex-direction: column;
-  height:750px;
+  height: 750px;
   width: 750px;
 }
 
@@ -396,6 +396,7 @@ main {
   display: flex;
   height: 350px;
   width: 350px;
+  margin: 20px 0 20px 0;
 }
 
 .genres {

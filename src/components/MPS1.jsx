@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import MovieCard from "./MovieCards";
+import MovieCards from "./MovieCards";
 
 const options = {
   method: "GET",
@@ -32,9 +32,7 @@ export default function MPS1({ url, title }) {
       <div className="movie-slider-1">
         {movies &&
           movies?.length > 0 &&
-          movies?.map((movie) => (
-            <MovieCard movie={movie} key={movie?.id} />
-          ))}
+        movies?.map((movie) => <MovieCards movie={movie} key={movie?.id} />)}
       </div>
     </div>
   );
