@@ -30,44 +30,82 @@ export default function MovieInfoCard() {
     fetchedMovieInfo();
   }, [movieId]);
 
-  return <div className="main-container">
-    <div className="heading-navbar">
-      <h1 className="title">{movieInfo?.title}</h1>
-      <div className="rating-popularity-container">
-      <p className="rating"> ⭐{movieInfo?.vote_average } /10</p>
-      <p className="popularity"> 👍{movieInfo?.popularity * 10000}</p>
+  return (
+    <div className="main-container">
+      <div className="heading-navbar">
+        <h1 className="title">{movieInfo?.title}</h1>
+        <div className="rating-popularity-container">
+          <p className="rating"> ⭐{Math.floor(movieInfo?.vote_average)} /10</p>
+          <p className="popularity"> 👍{Math.floor(movieInfo?.popularity)}</p>
+        </div>
       </div>
-      </div>
-    <div className="thumbnail-about-wrapper">
-      <div className="img-box">
-      <img
-      className="image"
-          src={`${img_base_url}/${img_size}/${movieInfo?.poster_path}`}
-          alt=""
-        />
+      <div className="thumbnail-about-wrapper">
+        <div className="img-box">
+          <img
+            className="image"
+            src={`${img_base_url}/${img_size}/${movieInfo?.poster_path}`}
+            alt=""
+          />
         </div>
         <div className="about">
           <div className="release-date">
             Release Date: {movieInfo?.release_date}
           </div>
           <div className="origin-country">
-          Origin country: {movieInfo?.production_countries.map((country)=> {
-              return <p className="country-name"> {country.name}</p>
+            Origin country:&nbsp;
+            {movieInfo?.production_countries.map((country) => {
+              return (
+                <p
+                  className="country-name"
+                  key={movieInfo?.production_countries.iso_3166_1}
+                >
+                  {" "}
+                  {country.name}, &nbsp;
+                </p>
+              ); // (&nbsp;)  used to add space between each word.//
             })}
           </div>
           <div className="production-companies">
-          Production: {movieInfo?.production_companies.map((company)=> {
-              return <p className="company-names">  {company.name}</p>
-              })}
+            Productions:&nbsp;
+            {movieInfo?.production_companies.map((company) => {
+              return (
+                <p
+                  className="company-names"
+                  key={movieInfo?.production_companies?.id}
+                >
+                  {" "}
+                  {company.name}, &nbsp;
+                </p>
+              ); // (&nbsp;)  used to add space between each word.//
+            })}
           </div>
+          <div className="spoken-languages">
+            Languages:&nbsp;
+            {movieInfo?.spoken_languages.map((language) => {
+              return (
+                <p
+                  className="languages"
+                  key={movieInfo?.spoken_languages?.name}
+                >
+                  {language.english_name},&nbsp;
+                </p>
+              );
+            })}
+          </div>
+          <div className="tagline">Banner: {movieInfo?.tagline}</div>
         </div>
-    </div>
+      </div>
       <div className="genres">
         {movieInfo?.genres.map((genre) => {
-        return <p className="genre-types"> {genre.name} </p>
-       })}</div> 
-    <div className="overview">
-      {movieInfo?.overview}
+          return (
+            <p className="genre-types" key={movieInfo?.genres.id}>
+              {" "}
+              {genre.name}{" "}
+            </p>
+          );
+        })}
+      </div>
+      <div className="overview">{movieInfo?.overview}</div>
     </div>
-    </div>;
+  );
 }
