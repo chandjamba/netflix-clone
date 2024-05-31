@@ -31,10 +31,11 @@ export default function MovieInfoCard() {
   }, [movieId]);
 
   return (
-    <div className="main-container">
+    <div className="main-container-1">
       <div className="heading-navbar">
         <h1 className="title">{movieInfo?.title}</h1>
-        <div className="rating-popularity-container">
+        <div className="rating-popularity-container"> 
+        <p className="movie-runtime"> {movieInfo?.runtime} min</p>
           <p className="rating"> ⭐{Math.floor(movieInfo?.vote_average)} /10</p>
           <p className="popularity"> 👍{Math.floor(movieInfo?.popularity)}</p>
         </div>
@@ -93,6 +94,9 @@ export default function MovieInfoCard() {
             })}
           </div>
           <div className="tagline">Banner: {movieInfo?.tagline}</div>
+          <div className="movie-link"> Visit:&nbsp;
+          <a href="movie-homepage-link"> {movieInfo?.homepage}.</a>
+          </div>
         </div>
       </div>
       <div className="genres">
@@ -106,6 +110,7 @@ export default function MovieInfoCard() {
         })}
       </div>
       <div className="overview">{movieInfo?.overview}</div>
+      <div className="main-container-2">chand jamba</div>
     </div>
   );
 }
