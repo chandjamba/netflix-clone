@@ -19,13 +19,13 @@ export default function MPS1({ url, title }) {
     //fetching the data from the url. //
     async function fetchMovies() {
       const resp = await fetch(url, options);
-      const jsonResp = await resp.json();
-
-      setMovies(jsonResp?.results);
+      const data = await resp.json();
+      const fetchedAllMovies = data.results;
+      console.log(fetchedAllMovies);
+      setMovies(fetchedAllMovies);
     }
     fetchMovies();
   }, [url]);
-  console.log(movies, "movies");
   return (
     <div className="slider-1-container">
       <h1 className="slider-heading"> {title} </h1>
