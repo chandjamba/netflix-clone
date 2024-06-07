@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const img_base_url = "http://image.tmdb.org/t/p/";
 const img_size = "original";
-export default function M ({ movie }) {
+export default function MovieCards ({ movie }) {
   return (
     <Link to={`/movie/${movie.id}`}>
       <div className="movie-content-box" key={movie?.id}>
