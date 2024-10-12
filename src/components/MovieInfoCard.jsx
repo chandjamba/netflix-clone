@@ -112,7 +112,17 @@ export default function MovieInfoCard() {
       <div className="overview">{movieInfo?.overview}</div>
       <div className="main-container-2">Scroll Down</div>
       <div className="main-container-3">
-        <div className="reactJs">Its ReactJs ⚛️</div>
+        <div className="flipCard">
+          <div className="flipCard__inner">
+          <div className="flipCard__front-side">
+            <div className="flipCard__front-side-heading">Front Side</div>
+          </div>
+
+          <div className="flipCard__back-side">
+            <div className="flipCard__back-side-heading">Back Side</div>
+          </div>
+        </div>
+        </div>
         </div>
     </div>
   );
