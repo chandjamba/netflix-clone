@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 export default function LoginForm() {
+  const [showPassword, setShowPassword] = useState(false);
+
+  function togglePassword() {
+    setShowPassword(!showPassword);
+  }
+
   return (
     <div className="wrapper">
       <form action="">
@@ -7,7 +15,14 @@ export default function LoginForm() {
           <input type="text" placeholder="Email or mobile number" required />
         </div>
         <div className="input-box">
-          <input type="password" placeholder="Password" required />
+          <input
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            required
+          />
+          <button type="button" onClick={togglePassword}>
+            {showPassword ? "hide password" : "show password"}
+          </button>
         </div>
         <div className="sign-in-btn">
           <button type="submit">Sign In</button>
