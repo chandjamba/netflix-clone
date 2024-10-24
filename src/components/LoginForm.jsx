@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./loginFormPage.scss";
 
 export default function LoginForm() {
   const [showPassword, setShowPassword] = useState(false);

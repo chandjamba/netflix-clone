@@ -1,4 +1,6 @@
 import MPS1 from "./MPS1";
+import "./mainPage.scss";
+
 export default function MainPage() {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>

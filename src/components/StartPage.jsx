@@ -1,3 +1,5 @@
+import "./startPage.scss"
+
 export default function StartPage() {
   return (
     <div className="start-page-wrapper">
