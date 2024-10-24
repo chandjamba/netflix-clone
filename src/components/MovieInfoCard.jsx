@@ -115,7 +115,7 @@ export default function MovieInfoCard() {
       <div className="main-container-2">Scroll Down</div>
       <div className="main-container-3">
         <div className="reactJs">Its ReactJs ⚛️</div>
-      </div>
+        </div>
     </div>
   );
 }
